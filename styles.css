@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url('bgphoto3.jpg');
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-out;
+}
+
+.canvas, .text-overlay {
+    position: relative;
+    z-index: 1; /* Bring the text overlay above the video */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .text-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.hero, .canvas, .text-overlay {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text-overlay {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+    color: #fff;
+    width: 100%;
+}
+
+.text-overlay h1 {
+    font-size: 3em;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: 0;
+}
+
+.text-overlay h2 {
+    margin-top: 20px;
+    font-size: 3em;
+    display: block;
+    width: 80%;
+    margin-bottom: 10px;
+    margin: 0;
+
+}
+
+.view-work-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #608bc1;
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.view-work-button:hover {
+    background-color: #133e87;
+    transform: scale(1.05);
+}
+
+.arrow-down {
+    font-size: 1.5em;
+    margin-left: 10px;
+    display: inline-block;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+.hero {
+    height: 100vh;
+}
+
+.connecting-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.text-overlay {
+    z-index: 2;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #000;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    position: sticky;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.section {
+    padding: 60px 20px;
+    margin: 60px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.section:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#about, #projects, #contact {
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 80px 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+#about h2, #projects h2, #contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+    background: #608bc1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details a {
+    align-self: flex-end;
+    padding: 8px 16px;
+    color: #fff;
+    border: 2px solid #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 50px;
+}
+
+.project-details p {
+    margin-left: 0px;
+}
+
+.project-details a:hover {
+    background-color: #fff;
+    color:#608bc1;
+}
+
+.project-details h3 {
+    margin-bottom: 10px;
+}
+
+
+#hero p {
+    font-size: 1.2em;
+    color: #608bc1;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3em;
+    margin: 10px 0 20px;
+}
+
+.resume-button {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    justify-items: center;
+    align-items: center;
+    background-color: #608bc1;
+    cursor: pointer;
+}
+
+#resume-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+
+
+#resume {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 80px 20px; /* Optional: Adjust padding for spacing */
+    background-color: #608bc1;
+}
+
+.resume-button a {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2em;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    align-items: center;
+    background-color: #608bc1;
+}
+
+.resume-button:hover {
+    background-color: #133e87; /* Change background on hover */
+    transform: scale(1.05);
+}
+
+
+a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    font-size: 1em;
+    text-align: center;
+    
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
+h1 {
+   font-size: 2.5em;
+   margin: 20px 0;
+}
+
+h2 {
+   text-align: center;
+   color: #fff;
+   margin: 20px 0;
+   size: 2.5em;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+
+
+#about {
+    padding: 80px 20px; /* Maintain the padding */
+    margin-top: 80px;
+}
+
+#about h2 {
+    font-size: 2.5em; /* Adjust the size as needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    text-align: center; /* Center align if desired */
+    color: #fff;
+    
+}
+
+#about p {
+    font-size: 1.2em; /* Adjust this value for paragraph text size */
+    line-height: 1.5; /* Optional: improve readability with line height */
+    max-width: 800px; /* Optional: limit the width for better readability */
+    margin: 0 auto; /* Center align paragraph */
+    color: #fff;
+    
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center; /* Horizontally center */
+    padding: 10px 20px;
+    margin-top: 60px;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+#contact .social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.view-project-button {
+    padding: 15px 30px; /* Increased padding for a bigger button */
+    background-color: #003366; /* Dark blue color */
+    color: #133e87; /* White text for better contrast */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 2.5em; /* Slightly larger font size */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.view-project-button:hover {
+    background-color: #133e87;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+    justify-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    font-size: 1em;;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 40px 20px;
+    }
+    #hero h1 {
+        font-size: 2.5em;
+    }
+
+    #hero h2 {
+        font-size: 1.2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+    .project {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-image {
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+
+    h1 {
+	font-size: 2em;
+    }
+
+    nav ul li {
+	display: block;
+	margin: 10px 0;
+    }
+}

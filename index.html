@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leena Jannatipour | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+	<div class="hero", id="hero">
+		<video autoplay muted loop class="background-video">
+			<source src="bgvid.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<div class="canvas">
+			<canvas class="connecting-dots", width="986" height="679" style="display: block;"></canvas>
+			<div class="text-overlay">
+				<h1>Hello, I'm Leena.</h1>
+    			<h2>I'm a Software Engineer passionate about creating real-world applications.</h2>
+				<a href="#projects" class="view-work-button">
+					View My Work
+					<span class="arrow-down">&#8595;</span>
+				</a>	
+			</div>
+		</div>
+    </div>
+
+	<header>
+		<h1>LJ.</h1>
+		<nav>
+	   		<ul>
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#contact">Contact</a></li>
+	   		</ul>
+		</nav>
+    </header>
+
+    <section id="about" class="section">
+		<h2>About Me</h2>
+		<p>I have recently graduated from the University of California, San Diego studying Machine Learning and Computer Science. My passion for coding comes down to making algorithms faster and building cool web applications and games. I mostly code in Java as it is my strongest language, Python, JavaScript, and C++. Furthermore, I am very interested in using automation to make cars safer to drive.</p>
+		<div id="resume-container">
+			<a href="https://docs.google.com/document/d/e/2PACX-1vQ--vjM9DRazPmy7JLPJttwjoI7fBafYlyS-q4u4ZTmDvRU7XqCMbZFjvR_zHXkWA/pub" target="_blank" class="resume-button">Resume</a>
+		</div>
+    </section>
+     
+    <section id="projects" class="section">
+		<h2>Projects</h2>
+		<div class="project">
+			<img src="Gameboard.png" alt="Screenshot of Colosseum Survival game" class="project-image">
+			<div class="project-details">
+				<h3>Colosseum Survival</h3>
+				<p>Colosseum Survival is a 2-player turn-based strategy game in which two players move in an M x M chessboard and put barriers around them until they are separated in two closed zones. M can have any value greater than 1. Each player will try to maximize the number of blocks in its zone to win the game.</p>
+				<a href="https://github.com/LeenaJannatipour/My-Portfolio/tree/main/ColosseumSurvival" target="_blank">View Project</a>
+			</div>
+		</div>
+
+		<div class="project" class="section">
+			<img src="NEWAPI.png" alt="Data Analysis project on the Marvels movie media coverage" class="project-image">
+			<div class="project-details"> 
+				<h3>Media Coverage Analysis: The Marvels</h3>
+				<p>In this project, our team analyzed media coverage surrounding the release of *The Marvels*. Using 500 articles from NewsAPI, we identified topics in each article and compared coverage volume with other movies released around the same time, providing insights into visibility and reception.</p>
+				<a href="https://github.com/LeenaJannatipour/My-Portfolio/tree/main/NewsAPI%20Project" target="_blank">View Project</a>
+			</div>
+		</div>
+    </section>
+
+    <section id="contact" class="section">
+		<h2>Contact Me</h2>
+		<p>Email: <a href="mailto:ljannati@ucsd.edu">ljannati@ucsd.edu</a></p>
+		<div class="social-links">
+			<a href="https://github.com/LeenaJannatipour/My-Portfolio/tree/main" target="_blank">
+				<img src="github-logo.png" alt="GitHub" class="social-icon">
+			</a>
+			<a href="https://www.linkedin.com/in/leenajannatipour" target="_blank">
+				<img src="linkedin-logo.png" alt="LinkedIn" class="social-icon">
+			</a>
+		</div>
+    </section>
+      
+    <footer>
+		<p>&copy; 2024 Leena Jannatipour</p>
+    </footer>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
